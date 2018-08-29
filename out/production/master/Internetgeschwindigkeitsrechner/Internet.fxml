@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" nodeOrientation="LEFT_TO_RIGHT" prefHeight="900.0" prefWidth="1600.0"
+            xmlns="http://javafx.com/javafx/8" fx:controller="Internetgeschwindigkeitsrechner.InternetController">
+    <children>
+        <HBox alignment="CENTER" prefHeight="900.0" prefWidth="1600.0">
+            <children>
+                <VBox alignment="CENTER" prefHeight="900.0" prefWidth="600.0">
+                    <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="500.0">
+                            <children>
+                                <Label alignment="CENTER" prefHeight="50.0" prefWidth="300.0" text="Dateigröße:">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="Size" alignment="CENTER" prefHeight="50.0" prefWidth="230.0"
+                                           promptText="Dateigröße">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </TextField>
+                                <ComboBox fx:id="CBEinheit" prefHeight="50.0" prefWidth="70.0"
+                                          promptText="Bitte Auswählen"/>
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="500.0">
+                            <children>
+                                <Label alignment="CENTER" prefHeight="50.0" prefWidth="300.0"
+                                       text="Downloadgeschwindigkeit in kbit/s">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="DLGes" alignment="CENTER" prefHeight="50.0" prefWidth="300.0"
+                                           promptText="Downloadgeschwindigkeit in kbit/s">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </TextField>
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="500.0">
+                            <children>
+                                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="300.0"
+                                       text="Uploadgeschwindigkeit in kbit/s">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="ULGes" alignment="CENTER" maxHeight="50.0" maxWidth="300.0"
+                                           prefHeight="50.0" prefWidth="300.0"
+                                           promptText="Uploadgeschwindigkeit in kbit/s">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </TextField>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+                <VBox alignment="CENTER" prefHeight="900.0" prefWidth="203.0" spacing="300.0">
+                    <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../Bilder/pfeil.png"/>
+                            </image>
+                        </ImageView>
+                        <Button fx:id="BtnCalc" mnemonicParsing="false" onAction="#BtnCalc" prefHeight="50.0"
+                                prefWidth="200.0" text="Umrechnen">
+                            <font>
+                                <Font size="16.0"/>
+                            </font>
+                        </Button>
+                    </children>
+                </VBox>
+                <VBox alignment="CENTER" prefHeight="900.0" prefWidth="650.0">
+                    <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="50.0">
+                            <children>
+                                <Label alignment="CENTER" prefHeight="50.0" prefWidth="200.0" text="Downloaddauer:">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="DLTime" prefHeight="50.0" prefWidth="400.0"
+                                           promptText="Downloaddauer">
+                                    <font>
+                                        <Font size="13.0"/>
+                                    </font>
+                                </TextField>
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                            <children>
+                                <Label alignment="CENTER" prefHeight="50.0" prefWidth="200.0" text="Uploaddauer:">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="ULTime" prefHeight="50.0" prefWidth="400.0" promptText="Uploaddauer">
+                                    <font>
+                                        <Font size="13.0"/>
+                                    </font>
+                                </TextField>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+        <Button fx:id="BtnBack" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#BtnBack"
+                prefHeight="50.0" prefWidth="250.0" text="Zurück zum Hauptmenü">
+            <font>
+                <Font size="16.0"/>
+            </font>
+        </Button>
+    </children>
+</AnchorPane>

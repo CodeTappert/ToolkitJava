@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/8"
+            fx:controller="Einheitenumrechner.EnergieController">
+    <children>
+        <HBox alignment="CENTER" layoutX="6.0" prefHeight="900.0" prefWidth="1600.0">
+            <children>
+                <VBox alignment="CENTER" prefHeight="900.0" prefWidth="600.0">
+                    <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+                            <children>
+                                <Label alignment="CENTER" minHeight="50.0" minWidth="200.0" text="Eingabe:">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="TFStart" alignment="CENTER" minHeight="50.0" minWidth="200.0"
+                                           promptText="Startgröße">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </TextField>
+                                <ComboBox fx:id="CBEingabe" minWidth="200.0" prefHeight="50.0" prefWidth="200.0"/>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="200.0">
+                    <children>
+                        <Button fx:id="BtnCalc" minHeight="50.0" minWidth="150.0" mnemonicParsing="false"
+                                onAction="#BtnCalc" text="Umrechnen">
+                            <font>
+                                <Font size="17.0"/>
+                            </font>
+                        </Button>
+                    </children>
+                </VBox>
+                <VBox fx:id="VBoxErgebniss" alignment="CENTER" layoutY="100.0" maxHeight="800.0" maxWidth="600.0"
+                      prefHeight="800.0" prefWidth="600.0" spacing="15.0">
+                    <children>
+                        <HBox fx:id="HJoule" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="50.0">
+                            <children>
+                                <Label fx:id="LJoule" alignment="CENTER" minHeight="50.0" minWidth="200.0"
+                                       text="Joule:">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="TFJoule" minHeight="50.0" minWidth="350.0" promptText="Quardratmeter">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </TextField>
+                            </children>
+                        </HBox>
+                        <HBox fx:id="HKilojoule" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="50.0">
+                            <children>
+                                <Label fx:id="LKilojoule" alignment="CENTER" minHeight="50.0" minWidth="200.0"
+                                       text="Kilojoule:">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="TFKilojoule" minHeight="50.0" minWidth="350.0" promptText="Kilojoule">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </TextField>
+                            </children>
+                        </HBox>
+                        <HBox fx:id="HKilokalorie" alignment="CENTER" prefHeight="50.0" prefWidth="200.0"
+                              spacing="50.0">
+                            <children>
+                                <Label fx:id="LKilokalorie" alignment="CENTER" minHeight="50.0" minWidth="200.0"
+                                       text="Kilokalorie:">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="TFKilokalorie" minHeight="50.0" minWidth="350.0"
+                                           promptText="Kilokalorie">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </TextField>
+                            </children>
+                        </HBox>
+                        <HBox fx:id="HKalorie" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="50.0">
+                            <children>
+                                <Label fx:id="LKalorie" alignment="CENTER" minHeight="50.0" minWidth="200.0"
+                                       text="Kalorie:">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="TFKalorie" minHeight="50.0" minWidth="350.0" promptText="Kalorie:">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </TextField>
+                            </children>
+                        </HBox>
+                        <HBox fx:id="HWattstunde" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="50.0">
+                            <children>
+                                <Label fx:id="LWattstunde" alignment="CENTER" minHeight="50.0" minWidth="200.0"
+                                       text="Wattstunde:">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="TFWattstunde" minHeight="50.0" minWidth="350.0"
+                                           promptText="Wattstunde">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </TextField>
+                            </children>
+                        </HBox>
+                        <HBox fx:id="HKilowattstunde" alignment="CENTER" prefHeight="50.0" prefWidth="200.0"
+                              spacing="50.0">
+                            <children>
+                                <Label fx:id="LKilowattstunde" alignment="CENTER" minHeight="50.0" minWidth="200.0"
+                                       text="Kilowattstunde:">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="TFKilowattstunde" minHeight="50.0" minWidth="350.0"
+                                           promptText="Kilowattstunde">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </TextField>
+                            </children>
+                        </HBox>
+                        <HBox fx:id="HElektronenvolt" alignment="CENTER" prefHeight="50.0" prefWidth="200.0"
+                              spacing="50.0">
+                            <children>
+                                <Label fx:id="LElektronenvolt" alignment="CENTER" minHeight="50.0" minWidth="200.0"
+                                       text="Elektronenvolt:">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="TFElektronenvolt" minHeight="50.0" minWidth="350.0"
+                                           promptText="Elektronenvolt">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </TextField>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+        <HBox alignment="CENTER" layoutX="950.0" layoutY="7.0" prefHeight="25.0" prefWidth="600.0" spacing="10.0">
+            <children>
+                <CheckBox fx:id="CBJoule" mnemonicParsing="false" onAction="#CBJoule" text="Joule"/>
+                <CheckBox fx:id="CBKilojoule" mnemonicParsing="false" onAction="#CBKilojoule" text="Kilojoule"/>
+                <CheckBox fx:id="CBKilokalorie" mnemonicParsing="false" onAction="#CBKilokalorie" text="Kilokalorie"/>
+                <CheckBox fx:id="CBKalorie" mnemonicParsing="false" onAction="#CBKalorie" text="Kalorie"/>
+            </children>
+        </HBox>
+        <HBox alignment="CENTER" layoutX="984.0" layoutY="34.0" prefHeight="25.0" prefWidth="600.0" spacing="15.0">
+            <children>
+                <CheckBox fx:id="CBWattstunde" mnemonicParsing="false" onAction="#CBWattstunde" text="Watttstunde"/>
+                <CheckBox fx:id="CBKilowattstunde" mnemonicParsing="false" onAction="#CBKilowattstunde"
+                          text="Kilowattstunde"/>
+                <CheckBox fx:id="CBElektronenvolt" mnemonicParsing="false" onAction="#CBElektronenvolt"
+                          text="Elektronenvolt"/>
+            </children>
+        </HBox>
+        <Button fx:id="BtnBack" layoutX="6.0" layoutY="8.0" minHeight="50.0" minWidth="200.0" mnemonicParsing="false"
+                onAction="#BtnBack" text="Zurück zum Hauptmenü">
+            <font>
+                <Font size="17.0"/>
+            </font>
+        </Button>
+        <HBox alignment="CENTER" layoutX="1000.0" layoutY="846.0" minHeight="50.0" minWidth="600.0" spacing="50.0">
+            <children>
+                <Button fx:id="BtnAnzeigen" minHeight="50.0" minWidth="200.0" mnemonicParsing="false"
+                        onAction="#BtnAnzeigen" text="Alle anzeigen">
+                    <font>
+                        <Font size="17.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="BtnVerstecken" minHeight="50.0" minWidth="200.0" mnemonicParsing="false"
+                        onAction="#BtnVerstecken" text="Alle verstecken">
+                    <font>
+                        <Font size="17.0"/>
+                    </font>
+                </Button>
+            </children>
+        </HBox>
+        <RadioButton fx:id="RadioExp" layoutX="780.0" layoutY="485.0" mnemonicParsing="false" onAction="#RadioExp"
+                     text="Anzeige mit Exponenten"/>
+    </children>
+</AnchorPane>

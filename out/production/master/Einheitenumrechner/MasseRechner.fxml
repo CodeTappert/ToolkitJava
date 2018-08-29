@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/8"
+            fx:controller="Einheitenumrechner.MasseController">
+    <children>
+        <HBox alignment="CENTER" layoutX="6.0" prefHeight="900.0" prefWidth="1600.0">
+            <children>
+                <VBox alignment="CENTER" prefHeight="900.0" prefWidth="600.0">
+                    <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+                            <children>
+                                <Label alignment="CENTER" minHeight="50.0" minWidth="200.0" text="Eingabe:">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="TFStart" alignment="CENTER" minHeight="50.0" minWidth="200.0"
+                                           promptText="Startgröße">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </TextField>
+                                <ComboBox fx:id="CBEingabe" minWidth="200.0" prefHeight="50.0" prefWidth="200.0"/>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="200.0">
+                    <children>
+                        <Button fx:id="BtnCalc" minHeight="50.0" minWidth="150.0" mnemonicParsing="false"
+                                onAction="#BtnCalc" text="Umrechnen">
+                            <font>
+                                <Font size="17.0"/>
+                            </font>
+                        </Button>
+                    </children>
+                </VBox>
+                <VBox fx:id="VBoxErgebniss" alignment="CENTER" layoutY="100.0" maxHeight="800.0" maxWidth="600.0"
+                      prefHeight="800.0" prefWidth="600.0" spacing="15.0">
+                    <children>
+                        <HBox fx:id="HMik" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="50.0">
+                            <children>
+                                <Label fx:id="LMik" alignment="CENTER" minHeight="50.0" minWidth="200.0"
+                                       text="Mikrogramm:">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="TFMik" minHeight="50.0" minWidth="300.0" promptText="Mikrogramm">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </TextField>
+                            </children>
+                        </HBox>
+                        <HBox fx:id="HMil" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="50.0">
+                            <children>
+                                <Label fx:id="LMil" alignment="CENTER" minHeight="50.0" minWidth="200.0"
+                                       text="Milligramm:">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="TFMil" minHeight="50.0" minWidth="300.0" promptText="Milligramm">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </TextField>
+                            </children>
+                        </HBox>
+                        <HBox fx:id="HG" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="50.0">
+                            <children>
+                                <Label fx:id="LG" alignment="CENTER" minHeight="50.0" minWidth="200.0" text="Gramm:">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="TFG" minHeight="50.0" minWidth="300.0" promptText="Gramm">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </TextField>
+                            </children>
+                        </HBox>
+                        <HBox fx:id="HKG" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="50.0">
+                            <children>
+                                <Label fx:id="LKG" alignment="CENTER" minHeight="50.0" minWidth="200.0"
+                                       text="Kilogramm:">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="TFKG" minHeight="50.0" minWidth="300.0" promptText="Kilogramm">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </TextField>
+                            </children>
+                        </HBox>
+                        <HBox fx:id="HT" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="50.0">
+                            <children>
+                                <Label fx:id="LT" alignment="CENTER" minHeight="50.0" minWidth="200.0" text="Tonne:">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="TFT" minHeight="50.0" minWidth="300.0" promptText="Tonne">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </TextField>
+                            </children>
+                        </HBox>
+                        <HBox fx:id="HU" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="50.0">
+                            <children>
+                                <Label fx:id="LU" alignment="CENTER" minHeight="50.0" minWidth="200.0" text="Unze:">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="TFU" minHeight="50.0" minWidth="300.0" promptText="Unze">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </TextField>
+                            </children>
+                        </HBox>
+                        <HBox fx:id="HP" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="50.0">
+                            <children>
+                                <Label fx:id="LP" alignment="CENTER" minHeight="50.0" minWidth="200.0" text="Pfund:">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="TFP" minHeight="50.0" minWidth="300.0" promptText="Pfund">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </TextField>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+        <HBox alignment="CENTER" layoutX="950.0" layoutY="7.0" prefHeight="25.0" prefWidth="600.0" spacing="10.0">
+            <children>
+                <CheckBox fx:id="CBMik" mnemonicParsing="false" onAction="#CBMik" text="Mikrogramm"/>
+                <CheckBox fx:id="CBMil" mnemonicParsing="false" onAction="#CBMil" text="Milligramm"/>
+                <CheckBox fx:id="CBG" mnemonicParsing="false" onAction="#CBG" text="Gramm"/>
+                <CheckBox fx:id="CBKG" mnemonicParsing="false" onAction="#CBKG" text="Kilogramm"/>
+            </children>
+        </HBox>
+        <HBox alignment="CENTER" layoutX="984.0" layoutY="34.0" prefHeight="25.0" prefWidth="600.0" spacing="15.0">
+            <children>
+                <CheckBox fx:id="CBT" mnemonicParsing="false" onAction="#CBT" text="Tonne"/>
+                <CheckBox fx:id="CBU" mnemonicParsing="false" onAction="#CBU" text="Unze"/>
+                <CheckBox fx:id="CBP" mnemonicParsing="false" onAction="#CBP" text="Pfund"/>
+            </children>
+        </HBox>
+        <Button fx:id="BtnBack" layoutX="6.0" layoutY="8.0" minHeight="50.0" minWidth="200.0" mnemonicParsing="false"
+                onAction="#BtnBack" text="Zurück zum Hauptmenü">
+            <font>
+                <Font size="17.0"/>
+            </font>
+        </Button>
+        <HBox alignment="CENTER" layoutX="1000.0" layoutY="846.0" minHeight="50.0" minWidth="600.0" spacing="50.0">
+            <children>
+                <Button fx:id="BtnAnzeigen" minHeight="50.0" minWidth="200.0" mnemonicParsing="false"
+                        onAction="#BtnAnzeigen" text="Alle anzeigen">
+                    <font>
+                        <Font size="17.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="BtnVerstecken" minHeight="50.0" minWidth="200.0" mnemonicParsing="false"
+                        onAction="#BtnVerstecken" text="Alle verstecken">
+                    <font>
+                        <Font size="17.0"/>
+                    </font>
+                </Button>
+            </children>
+        </HBox>
+        <RadioButton fx:id="RadioExp" layoutX="780.0" layoutY="482.0" mnemonicParsing="false" onAction="#RadioExp"
+                     text="Ausgabe mit Exponenten"/>
+    </children>
+</AnchorPane>

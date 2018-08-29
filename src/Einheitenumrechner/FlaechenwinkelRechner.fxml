@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/8"
+            fx:controller="Einheitenumrechner.FlaechenwinkelController">
+    <children>
+        <HBox alignment="CENTER" layoutX="6.0" prefHeight="900.0" prefWidth="1600.0">
+            <children>
+                <VBox alignment="CENTER" prefHeight="900.0" prefWidth="600.0">
+                    <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+                            <children>
+                                <Label alignment="CENTER" minHeight="50.0" minWidth="200.0" text="Eingabe:">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="TFStart" alignment="CENTER" minHeight="50.0" minWidth="200.0"
+                                           promptText="Startgröße">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </TextField>
+                                <ComboBox fx:id="CBEingabe" minWidth="200.0" prefHeight="50.0" prefWidth="200.0"/>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="200.0">
+                    <children>
+                        <Button fx:id="BtnCalc" minHeight="50.0" minWidth="150.0" mnemonicParsing="false"
+                                onAction="#BtnCalc" text="Umrechnen">
+                            <font>
+                                <Font size="17.0"/>
+                            </font>
+                        </Button>
+                    </children>
+                </VBox>
+                <VBox fx:id="VBoxErgebniss" alignment="CENTER" layoutY="100.0" maxHeight="800.0" maxWidth="600.0"
+                      prefHeight="800.0" prefWidth="600.0" spacing="15.0">
+                    <children>
+                        <HBox fx:id="HGrad" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="50.0">
+                            <children>
+                                <Label fx:id="LGrad" alignment="CENTER" minHeight="50.0" minWidth="200.0" text="Grad:">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="TFGrad" minHeight="50.0" minWidth="350.0" promptText="Grad">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </TextField>
+                            </children>
+                        </HBox>
+                        <HBox fx:id="HGon" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="50.0">
+                            <children>
+                                <Label fx:id="LGon" alignment="CENTER" minHeight="50.0" minWidth="200.0" text="Gon:">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="TFGon" minHeight="50.0" minWidth="350.0" promptText="Gon">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </TextField>
+                            </children>
+                        </HBox>
+                        <HBox fx:id="HRadiant" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="50.0">
+                            <children>
+                                <Label fx:id="LRadiant" alignment="CENTER" minHeight="50.0" minWidth="200.0"
+                                       text="Radiant:">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="TFRadiant" minHeight="50.0" minWidth="350.0" promptText="Radiant">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </TextField>
+                            </children>
+                        </HBox>
+                        <HBox fx:id="HStrich" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="50.0">
+                            <children>
+                                <Label fx:id="LStrich" alignment="CENTER" minHeight="50.0" minWidth="200.0"
+                                       text="Strich:">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="TFStrich" minHeight="50.0" minWidth="350.0" promptText="Strich">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </TextField>
+                            </children>
+                        </HBox>
+                        <HBox fx:id="HWinkelminute" alignment="CENTER" prefHeight="50.0" prefWidth="200.0"
+                              spacing="50.0">
+                            <children>
+                                <Label fx:id="LWinkelminute" alignment="CENTER" minHeight="50.0" minWidth="200.0"
+                                       text="Winkelminute:">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="TFWinkelminute" minHeight="50.0" minWidth="350.0"
+                                           promptText="Winkelminute">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </TextField>
+                            </children>
+                        </HBox>
+                        <HBox fx:id="HWinkelsekunde" alignment="CENTER" prefHeight="50.0" prefWidth="200.0"
+                              spacing="50.0">
+                            <children>
+                                <Label fx:id="LWinkelsekunde" alignment="CENTER" minHeight="50.0" minWidth="200.0"
+                                       text="Winkelsekunde:">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="TFWinkelsekunde" minHeight="50.0" minWidth="350.0"
+                                           promptText="Winkelsekunde">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </TextField>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+        <HBox alignment="CENTER" layoutX="950.0" layoutY="7.0" prefHeight="25.0" prefWidth="600.0" spacing="10.0">
+            <children>
+                <CheckBox fx:id="CBGrad" mnemonicParsing="false" onAction="#CBGrad" text="Grad"/>
+                <CheckBox fx:id="CBGon" mnemonicParsing="false" onAction="#CBGon" text="Gon"/>
+                <CheckBox fx:id="CBRadiant" mnemonicParsing="false" onAction="#CBRadiant" text="Radiant"/>
+            </children>
+        </HBox>
+        <HBox alignment="CENTER" layoutX="984.0" layoutY="34.0" prefHeight="25.0" prefWidth="600.0" spacing="15.0">
+            <children>
+                <CheckBox fx:id="CBStrich" mnemonicParsing="false" onAction="#CBStrich" text="Strich"/>
+                <CheckBox fx:id="CBWinkelminute" mnemonicParsing="false" onAction="#CBWinkelminute"
+                          text="Winkelminute"/>
+                <CheckBox fx:id="CBWinkelsekunde" mnemonicParsing="false" onAction="#CBWinkelsekunde"
+                          text="Winkelsekunde"/>
+            </children>
+        </HBox>
+        <Button fx:id="BtnBack" layoutX="6.0" layoutY="8.0" minHeight="50.0" minWidth="200.0" mnemonicParsing="false"
+                onAction="#BtnBack" text="Zurück zum Hauptmenü">
+            <font>
+                <Font size="17.0"/>
+            </font>
+        </Button>
+        <HBox alignment="CENTER" layoutX="1000.0" layoutY="846.0" minHeight="50.0" minWidth="600.0" spacing="50.0">
+            <children>
+                <Button fx:id="BtnAnzeigen" minHeight="50.0" minWidth="200.0" mnemonicParsing="false"
+                        onAction="#BtnAnzeigen" text="Alle anzeigen">
+                    <font>
+                        <Font size="17.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="BtnVerstecken" minHeight="50.0" minWidth="200.0" mnemonicParsing="false"
+                        onAction="#BtnVerstecken" text="Alle verstecken">
+                    <font>
+                        <Font size="17.0"/>
+                    </font>
+                </Button>
+            </children>
+        </HBox>
+        <RadioButton fx:id="RadioExp" layoutX="783.0" layoutY="485.0" mnemonicParsing="false" onAction="#RadioExp"
+                     text="Anzeige mit Exponenten"/>
+    </children>
+</AnchorPane>

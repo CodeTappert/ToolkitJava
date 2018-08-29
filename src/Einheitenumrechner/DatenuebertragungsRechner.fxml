@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/8"
+            fx:controller="Einheitenumrechner.DatenuebertragungsController">
+    <children>
+        <HBox alignment="CENTER" layoutX="6.0" layoutY="58.0" prefHeight="842.0" prefWidth="1600.0">
+            <children>
+                <VBox alignment="CENTER" prefHeight="900.0" prefWidth="600.0">
+                    <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+                            <children>
+                                <Label alignment="CENTER" minHeight="50.0" minWidth="200.0" text="Eingabe:">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="TFStart" alignment="CENTER" minHeight="50.0" minWidth="200.0"
+                                           promptText="Startgröße">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </TextField>
+                                <ComboBox fx:id="CBEingabe" minWidth="200.0" prefHeight="50.0" prefWidth="200.0"/>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="200.0">
+                    <children>
+                        <Button fx:id="BtnCalc" minHeight="50.0" minWidth="150.0" mnemonicParsing="false"
+                                onAction="#BtnCalc" text="Umrechnen">
+                            <font>
+                                <Font size="17.0"/>
+                            </font>
+                        </Button>
+                    </children>
+                </VBox>
+                <VBox fx:id="VBoxErgebniss" alignment="CENTER" layoutY="100.0" maxHeight="800.0" maxWidth="600.0"
+                      prefHeight="800.0" prefWidth="600.0" spacing="15.0">
+                    <children>
+                        <HBox fx:id="HBit" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="50.0">
+                            <children>
+                                <Label fx:id="LBit" alignment="CENTER" minHeight="50.0" minWidth="200.0" text="Bit:">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="TFBit" minHeight="50.0" minWidth="350.0" promptText="Bit">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </TextField>
+                            </children>
+                        </HBox>
+                        <HBox fx:id="HKilobit" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="50.0">
+                            <children>
+                                <Label fx:id="LKilobit" alignment="CENTER" minHeight="50.0" minWidth="200.0"
+                                       text="Kilobit pro Sekunde:">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="TFKilobit" minHeight="50.0" minWidth="350.0"
+                                           promptText="Kilobit pro Sekunde">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </TextField>
+                            </children>
+                        </HBox>
+                        <HBox fx:id="HKilobyte" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="50.0">
+                            <children>
+                                <Label fx:id="LKilobyte" alignment="CENTER" minHeight="50.0" minWidth="200.0"
+                                       text="Kilobyte pro Sekunde:">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="TFKilobyte" minHeight="50.0" minWidth="350.0"
+                                           promptText="Kilobyte pro Sekunde">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </TextField>
+                            </children>
+                        </HBox>
+                        <HBox fx:id="HKibibit" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="50.0">
+                            <children>
+                                <Label fx:id="LKibibit" alignment="CENTER" minHeight="50.0" minWidth="200.0"
+                                       text="Kibibit pro Sekunde:">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="TFKibibit" minHeight="50.0" minWidth="350.0"
+                                           promptText="Kibibit pro Sekunde">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </TextField>
+                            </children>
+                        </HBox>
+                        <HBox fx:id="HMegabit" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="50.0">
+                            <children>
+                                <Label fx:id="LMegabit" alignment="CENTER" minHeight="50.0" minWidth="200.0"
+                                       text="Megabit pro Sekunde:">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="TFMegabit" minHeight="50.0" minWidth="350.0"
+                                           promptText="Megabit pro Sekunde">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </TextField>
+                            </children>
+                        </HBox>
+                        <HBox fx:id="HMegabyte" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="50.0">
+                            <children>
+                                <Label fx:id="LMegabyte" alignment="CENTER" minHeight="50.0" minWidth="200.0"
+                                       text="Megabyte pro Sekunde:">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="TFMegabyte" minHeight="50.0" minWidth="350.0"
+                                           promptText="Megabyte pro Sekunde">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </TextField>
+                            </children>
+                        </HBox>
+                        <HBox fx:id="HMebibit" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="50.0">
+                            <children>
+                                <Label fx:id="LMebibit" alignment="CENTER" minHeight="50.0" minWidth="200.0"
+                                       text="Mebibit pro Sekunde:">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="TFMebibit" minHeight="50.0" minWidth="350.0"
+                                           promptText="Mebibit pro Sekunde">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </TextField>
+                            </children>
+                        </HBox>
+                        <HBox fx:id="HGigabit" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="50.0">
+                            <children>
+                                <Label fx:id="LGigabit" alignment="CENTER" minHeight="50.0" minWidth="200.0"
+                                       text="Gigabit pro Sekunde:">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="TFGigabit" minHeight="50.0" minWidth="350.0"
+                                           promptText="Gigabit pro Sekunde">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </TextField>
+                            </children>
+                        </HBox>
+                        <HBox fx:id="HGigabyte" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="50.0">
+                            <children>
+                                <Label fx:id="LGigabyte" alignment="CENTER" minHeight="50.0" minWidth="200.0"
+                                       text="Gigabyte pro Sekunde:">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="TFGigabyte" minHeight="50.0" minWidth="350.0"
+                                           promptText="Gigabyte pro Sekunde">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </TextField>
+                            </children>
+                        </HBox>
+                        <HBox fx:id="HGibibit" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="50.0">
+                            <children>
+                                <Label fx:id="LGibibit" alignment="CENTER" minHeight="50.0" minWidth="200.0"
+                                       text="Gibibit pro Sekunde:">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="TFGibibit" minHeight="50.0" minWidth="350.0"
+                                           promptText="Gibibit pro Sekunde">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </TextField>
+                            </children>
+                        </HBox>
+                        <HBox fx:id="HTerabit" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="50.0">
+                            <children>
+                                <Label fx:id="LTerabit" alignment="CENTER" minHeight="50.0" minWidth="200.0"
+                                       text="Terabit pro Sekunde:">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="TFTerabit" minHeight="50.0" minWidth="350.0"
+                                           promptText="Terabit pro Sekunde">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </TextField>
+                            </children>
+                        </HBox>
+                        <HBox fx:id="HTerabyte" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="50.0">
+                            <children>
+                                <Label fx:id="LTerabyte" alignment="CENTER" minHeight="50.0" minWidth="200.0"
+                                       text="Terabyte pro Sekunde:">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="TFTerabyte" minHeight="50.0" minWidth="350.0"
+                                           promptText="Terabyte pro Sekunde">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </TextField>
+                            </children>
+                        </HBox>
+                        <HBox fx:id="HTebibit" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="50.0">
+                            <children>
+                                <Label fx:id="LTebibit" alignment="CENTER" minHeight="50.0" minWidth="200.0"
+                                       text="Tebibit pro Sekunde:">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="TFTebibit" minHeight="50.0" minWidth="350.0"
+                                           promptText="Tebibit pro Sekunde:">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </TextField>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+        <HBox alignment="CENTER" layoutX="950.0" layoutY="7.0" prefHeight="25.0" prefWidth="700.0" spacing="10.0">
+            <children>
+                <CheckBox fx:id="CBBit" mnemonicParsing="false" onAction="#CBBit" text="Bit"/>
+                <CheckBox fx:id="CBKilobit" mnemonicParsing="false" onAction="#CBKilobit" text="Kilobit"/>
+                <CheckBox fx:id="CBKilobyte" mnemonicParsing="false" onAction="#CBKilobyte" text="Kilobyte"/>
+                <CheckBox fx:id="CBKibibit" mnemonicParsing="false" onAction="#CBKibibit" text="Kibibit"/>
+                <CheckBox fx:id="CBMegabit" mnemonicParsing="false" onAction="#CBMegabit" text="Megabit"/>
+                <CheckBox fx:id="CBMegabyte" mnemonicParsing="false" onAction="#CBMegabyte" text="Megabyte"/>
+            </children>
+        </HBox>
+        <HBox alignment="CENTER" layoutX="984.0" layoutY="34.0" prefHeight="25.0" prefWidth="600.0" spacing="15.0">
+            <children>
+                <CheckBox fx:id="CBMebibit" mnemonicParsing="false" onAction="#CBMebibit" text="Mebibit"/>
+                <CheckBox fx:id="CBGigabit" mnemonicParsing="false" onAction="#CBGigabit" text="Gigabit"/>
+                <CheckBox fx:id="CBGigabyte" mnemonicParsing="false" onAction="#CBGigabyte" text="Gigabyte"/>
+                <CheckBox fx:id="CBGibibit" mnemonicParsing="false" onAction="#CBGibibit" text="Gibibit"/>
+                <CheckBox fx:id="CBTerabit" mnemonicParsing="false" onAction="#CBTerabit" text="Terabit"/>
+                <CheckBox fx:id="CBTerabyte" mnemonicParsing="false" onAction="#CBTerabyte" text="Terabyte"/>
+                <CheckBox fx:id="CBTebibit" mnemonicParsing="false" onAction="#CBTebibit" text="Tebibit"/>
+            </children>
+        </HBox>
+        <Button fx:id="BtnBack" layoutX="6.0" layoutY="8.0" minHeight="50.0" minWidth="200.0" mnemonicParsing="false"
+                onAction="#BtnBack" text="Zurück zum Hauptmenü">
+            <font>
+                <Font size="17.0"/>
+            </font>
+        </Button>
+        <HBox alignment="CENTER" layoutX="412.0" layoutY="844.0" minHeight="50.0" minWidth="600.0" spacing="50.0">
+            <children>
+                <Button fx:id="BtnAnzeigen" minHeight="50.0" minWidth="200.0" mnemonicParsing="false"
+                        onAction="#BtnAnzeigen" text="Alle anzeigen">
+                    <font>
+                        <Font size="17.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="BtnVerstecken" minHeight="50.0" minWidth="200.0" mnemonicParsing="false"
+                        onAction="#BtnVerstecken" text="Alle verstecken">
+                    <font>
+                        <Font size="17.0"/>
+                    </font>
+                </Button>
+            </children>
+        </HBox>
+        <RadioButton fx:id="RadioExp" layoutX="780.0" layoutY="511.0" mnemonicParsing="false" onAction="#RadioExp"
+                     text="Ausgabe mit Exponenten"/>
+    </children>
+</AnchorPane>

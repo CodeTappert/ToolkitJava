@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Einheitenumrechner.ZeitController">
+    <children>
+        <HBox alignment="CENTER" layoutX="6.0" prefHeight="900.0" prefWidth="1600.0">
+            <children>
+                <VBox alignment="CENTER" prefHeight="900.0" prefWidth="600.0">
+                    <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+                            <children>
+                                <Label alignment="CENTER" minHeight="50.0" minWidth="200.0" text="Eingabe:">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="TFStart" alignment="CENTER" minHeight="50.0" minWidth="200.0" promptText="Startgröße">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </TextField>
+                                <ComboBox fx:id="CBEingabe" minWidth="200.0" prefHeight="50.0" prefWidth="200.0" />
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="200.0">
+                    <children>
+                        <Button fx:id="BtnCalc" minHeight="50.0" minWidth="150.0" mnemonicParsing="false" onAction="#BtnCalc" text="Umrechnen">
+                            <font>
+                                <Font size="17.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </VBox>
+                <VBox fx:id="VBoxErgebniss" alignment="CENTER" layoutY="100.0" maxHeight="800.0" maxWidth="600.0" prefHeight="800.0" prefWidth="600.0" spacing="15.0">
+                    <children>
+                        <HBox fx:id="HNSek" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="50.0">
+                            <children>
+                                <Label fx:id="LNSek" alignment="CENTER" minHeight="50.0" minWidth="200.0" text="Nanosekunden:">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="TFNSek" minHeight="50.0" minWidth="300.0" promptText="Nanosekunden">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </TextField>
+                            </children>
+                        </HBox>
+                        <HBox fx:id="HMiSek" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="50.0">
+                            <children>
+                                <Label fx:id="LMiSek" alignment="CENTER" minHeight="50.0" minWidth="200.0" text="Mikrosekunden:">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="TFMiSek" minHeight="50.0" minWidth="300.0" promptText="Mikrosekunden">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </TextField>
+                            </children>
+                        </HBox>
+                        <HBox fx:id="HMilSek" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="50.0">
+                            <children>
+                                <Label fx:id="LMilSek" alignment="CENTER" minHeight="50.0" minWidth="200.0" text="Millisekunden:">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="TFMilSek" minHeight="50.0" minWidth="300.0" promptText="Millisekunden">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </TextField>
+                            </children>
+                        </HBox>
+                        <HBox fx:id="HSek" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="50.0">
+                            <children>
+                                <Label fx:id="LSek" alignment="CENTER" minHeight="50.0" minWidth="200.0" text="Sekunden:">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="TFSek" minHeight="50.0" minWidth="300.0" promptText="Sekunden">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </TextField>
+                            </children>
+                        </HBox>
+                        <HBox fx:id="HMin" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="50.0">
+                            <children>
+                                <Label fx:id="LMin" alignment="CENTER" minHeight="50.0" minWidth="200.0" text="Minuten:">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="TFMin" minHeight="50.0" minWidth="300.0" promptText="Minuten">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </TextField>
+                            </children>
+                        </HBox>
+                        <HBox fx:id="HHour" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="50.0">
+                            <children>
+                                <Label fx:id="LHour" alignment="CENTER" minHeight="50.0" minWidth="200.0" text="Stunden:">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="TFHour" minHeight="50.0" minWidth="300.0" promptText="Stunden">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </TextField>
+                            </children>
+                        </HBox>
+                        <HBox fx:id="HDay" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="50.0">
+                            <children>
+                                <Label fx:id="LDay" alignment="CENTER" minHeight="50.0" minWidth="200.0" text="Tage:">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="TFDay" minHeight="50.0" minWidth="300.0" promptText="Tage">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </TextField>
+                            </children>
+                        </HBox>
+                        <HBox fx:id="HWeek" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="50.0">
+                            <children>
+                                <Label fx:id="LWeek" alignment="CENTER" minHeight="50.0" minWidth="200.0" text="Wochen:">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="TFWeek" minHeight="50.0" minWidth="300.0" promptText="Wochen">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </TextField>
+                            </children>
+                        </HBox>
+                        <HBox fx:id="HMonth" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="50.0">
+                            <children>
+                                <Label fx:id="LMonth" alignment="CENTER" minHeight="50.0" minWidth="200.0" text="Monate:">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="TFMonth" minHeight="50.0" minWidth="300.0" promptText="Monate">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </TextField>
+                            </children>
+                        </HBox>
+                        <HBox fx:id="HYear" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="50.0">
+                            <children>
+                                <Label fx:id="LYear" alignment="CENTER" minHeight="50.0" minWidth="200.0" text="Jahre:">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="TFYear" minHeight="50.0" minWidth="300.0" promptText="Jahre">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </TextField>
+                            </children>
+                        </HBox>
+                        <HBox fx:id="HJZehnt" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="50.0">
+                            <children>
+                                <Label fx:id="LJZehnt" alignment="CENTER" minHeight="50.0" minWidth="200.0" text="Jahrzehnte:">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="TFJZehnt" minHeight="50.0" minWidth="300.0" promptText="Jahrzehnte">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </TextField>
+                            </children>
+                        </HBox>
+                        <HBox fx:id="HJH" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="50.0">
+                            <children>
+                                <Label fx:id="LJH" alignment="CENTER" minHeight="50.0" minWidth="200.0" text="Jahrhunderte:">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="TFJH" minHeight="50.0" minWidth="300.0" promptText="Jahrhunderte">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </TextField>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+        <HBox alignment="CENTER" layoutX="950.0" layoutY="7.0" prefHeight="25.0" prefWidth="600.0" spacing="10.0">
+            <children>
+                <CheckBox fx:id="CBNSek" mnemonicParsing="false" onAction="#CBNSek" text="Nanosekunden" />
+                <CheckBox fx:id="CBMiSek" mnemonicParsing="false" onAction="#CBMiSek" text="Mikrosekunden" />
+                <CheckBox fx:id="CBMilSek" mnemonicParsing="false" onAction="#CBMilSek" text="Millisekunden" />
+                <CheckBox fx:id="CBSek" mnemonicParsing="false" onAction="#CBSek" text="Sekunden" />
+                <CheckBox fx:id="CBMin" mnemonicParsing="false" onAction="#CBMin" text="Minuten" />
+                <CheckBox fx:id="CBHour" mnemonicParsing="false" onAction="#CBHour" text="Stunden" />
+            </children>
+        </HBox>
+        <HBox alignment="CENTER" layoutX="984.0" layoutY="34.0" prefHeight="25.0" prefWidth="600.0" spacing="15.0">
+            <children>
+                <CheckBox fx:id="CBDay" mnemonicParsing="false" onAction="#CBDay" text="Tage" />
+                <CheckBox fx:id="CBWeek" mnemonicParsing="false" onAction="#CBWeek" text="Woche" />
+                <CheckBox fx:id="CBMonth" mnemonicParsing="false" onAction="#CBMonth" text="Monate" />
+                <CheckBox fx:id="CBYear" mnemonicParsing="false" onAction="#CBYear" text="Jahre" />
+                <CheckBox fx:id="CBJZehnt" mnemonicParsing="false" onAction="#CBJZehnt" text="Jahrzehnt" />
+                <CheckBox fx:id="CBJH" mnemonicParsing="false" onAction="#CBJH" text="Jahrhundert" />
+            </children>
+        </HBox>
+        <Button fx:id="BtnBack" layoutX="6.0" layoutY="8.0" minHeight="50.0" minWidth="200.0" mnemonicParsing="false" onAction="#BtnBack" text="Zurück zum Hauptmenü">
+            <font>
+                <Font size="17.0" />
+            </font>
+        </Button>
+      <HBox alignment="CENTER" layoutX="1000.0" layoutY="846.0" minHeight="50.0" minWidth="600.0" spacing="50.0">
+         <children>
+            <Button fx:id="BtnAnzeigen" minHeight="50.0" minWidth="200.0" mnemonicParsing="false" onAction="#BtnAnzeigen" text="Alle anzeigen">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+            <Button fx:id="BtnVerstecken" minHeight="50.0" minWidth="200.0" mnemonicParsing="false" onAction="#BtnVerstecken" text="Alle verstecken">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+    </children>
+</AnchorPane>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/8"
+            fx:controller="Einheitenumrechner.VolumenController">
+    <children>
+        <HBox alignment="CENTER" layoutX="6.0" prefHeight="900.0" prefWidth="1600.0">
+            <children>
+                <VBox alignment="CENTER" prefHeight="900.0" prefWidth="600.0">
+                    <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+                            <children>
+                                <Label alignment="CENTER" minHeight="50.0" minWidth="200.0" text="Eingabe:">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="TFStart" alignment="CENTER" minHeight="50.0" minWidth="200.0"
+                                           promptText="Startgröße">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </TextField>
+                                <ComboBox fx:id="CBEingabe" minWidth="200.0" prefHeight="50.0" prefWidth="200.0"/>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="200.0">
+                    <children>
+                        <Button fx:id="BtnCalc" minHeight="50.0" minWidth="150.0" mnemonicParsing="false"
+                                onAction="#BtnCalc" text="Umrechnen">
+                            <font>
+                                <Font size="17.0"/>
+                            </font>
+                        </Button>
+                    </children>
+                </VBox>
+                <VBox fx:id="VBoxErgebniss" alignment="CENTER" layoutY="100.0" maxHeight="800.0" maxWidth="600.0"
+                      prefHeight="800.0" prefWidth="600.0" spacing="15.0">
+                    <children>
+                        <HBox fx:id="HML" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="50.0">
+                            <children>
+                                <Label fx:id="LML" alignment="CENTER" minHeight="50.0" minWidth="200.0"
+                                       text="Milliliter">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="TFML" minHeight="50.0" minWidth="300.0" promptText="Milliliter">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </TextField>
+                            </children>
+                        </HBox>
+                        <HBox fx:id="HL" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="50.0">
+                            <children>
+                                <Label fx:id="LL" alignment="CENTER" minHeight="50.0" minWidth="200.0" text="Liter:">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="TFL" minHeight="50.0" minWidth="300.0" promptText="Liter">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </TextField>
+                            </children>
+                        </HBox>
+                        <HBox fx:id="HKCM" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="50.0">
+                            <children>
+                                <Label fx:id="LKCM" alignment="CENTER" minHeight="50.0" minWidth="200.0"
+                                       text="Kubikzentimeter:">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="TFKCM" minHeight="50.0" minWidth="300.0" promptText="Kubikzentimeter">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </TextField>
+                            </children>
+                        </HBox>
+                        <HBox fx:id="HKM" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="50.0">
+                            <children>
+                                <Label fx:id="LKM" alignment="CENTER" minHeight="50.0" minWidth="200.0"
+                                       text="Kubikmeter:">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="TFKM" minHeight="50.0" minWidth="300.0" promptText="Kubikmeter">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </TextField>
+                            </children>
+                        </HBox>
+                        <HBox fx:id="HEL" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="50.0">
+                            <children>
+                                <Label fx:id="LEL" alignment="CENTER" minHeight="50.0" minWidth="200.0"
+                                       text="Esslöfel (UK):">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="TFEL" minHeight="50.0" minWidth="300.0" promptText="Esslöfel (UK)">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </TextField>
+                            </children>
+                        </HBox>
+                        <HBox fx:id="HTL" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="50.0">
+                            <children>
+                                <Label fx:id="LTL" alignment="CENTER" minHeight="50.0" minWidth="200.0"
+                                       text="Teelöfel (UK):">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="TFTL" minHeight="50.0" minWidth="300.0" promptText="Teelöfel (UK):">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </TextField>
+                            </children>
+                        </HBox>
+                        <HBox fx:id="HCup" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="50.0">
+                            <children>
+                                <Label fx:id="LCup" alignment="CENTER" minHeight="50.0" minWidth="200.0"
+                                       text="Cup (UK):">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="TFCup" minHeight="50.0" minWidth="300.0" promptText="Cup (UK)">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </TextField>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+        <HBox alignment="CENTER" layoutX="950.0" layoutY="7.0" prefHeight="25.0" prefWidth="600.0" spacing="10.0">
+            <children>
+                <CheckBox fx:id="CBML" mnemonicParsing="false" onAction="#CBML" text="Milliliter"/>
+                <CheckBox fx:id="CBL" mnemonicParsing="false" onAction="#CBL" text="Liter"/>
+                <CheckBox fx:id="CBKCM" mnemonicParsing="false" onAction="#CBKCM" text="Kubikzentimeter"/>
+                <CheckBox fx:id="CBKM" mnemonicParsing="false" onAction="#CBKM" text="Kubikmeter"/>
+                <CheckBox fx:id="CBEL" mnemonicParsing="false" onAction="#CBEL" text="Esslöfel (UK)"/>
+                <CheckBox fx:id="CBTL" mnemonicParsing="false" onAction="#CBTL" text="Teelöfel (UK)"/>
+            </children>
+        </HBox>
+        <HBox alignment="CENTER" layoutX="984.0" layoutY="34.0" prefHeight="25.0" prefWidth="600.0" spacing="15.0">
+            <children>
+                <CheckBox fx:id="CBCup" mnemonicParsing="false" onAction="#CBCup" text="Cup (UK)"/>
+            </children>
+        </HBox>
+        <Button fx:id="BtnBack" layoutX="6.0" layoutY="8.0" minHeight="50.0" minWidth="200.0" mnemonicParsing="false"
+                onAction="#BtnBack" text="Zurück zum Hauptmenü">
+            <font>
+                <Font size="17.0"/>
+            </font>
+        </Button>
+        <HBox alignment="CENTER" layoutX="1000.0" layoutY="846.0" minHeight="50.0" minWidth="600.0" spacing="50.0">
+            <children>
+                <Button fx:id="BtnAnzeigen" minHeight="50.0" minWidth="200.0" mnemonicParsing="false"
+                        onAction="#BtnAnzeigen" text="Alle anzeigen">
+                    <font>
+                        <Font size="17.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="BtnVerstecken" minHeight="50.0" minWidth="200.0" mnemonicParsing="false"
+                        onAction="#BtnVerstecken" text="Alle verstecken">
+                    <font>
+                        <Font size="17.0"/>
+                    </font>
+                </Button>
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>
